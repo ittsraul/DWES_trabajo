@@ -1,0 +1,14 @@
+ {% extends "base.html.twig" %}
+ {% block index %}
+ <div class="navi">
+        <span><a href="#home">Home</a></span>
+        <span><a href="{{ path('app_list')}}">ListUsers</a></span>
+        <span><a href="#">Contact</a></span>
+      </div>
+      <div class="page">
+      {% block menu %}
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+      </div>
+{% endblock %}
