@@ -1,0 +1,23 @@
+{% extends "/layout/layout.html.twig" %}
+	{% block detail %}
+	<div id="content">
+	<h3>DETALLE DE CLIENTE SELECCIONADO:</h3>
+	<nav>
+		<ul>
+			<li>CLIENTE_COD : {{ CLIENTE_COD }}</li>
+			<li>NOMBRE : {{ NOMBRE }}</li>
+			<li>DIREC : {{ DIREC }}</li>
+			<li>CIUDAD : {{ CIUDAD }}</li>
+			<li>ESTADO : {{ ESTADO }}</li>
+			<li>COD_POSTAL : {{ COD_POSTAL }}</li>
+			<li>AREA : {{ AREA }}</li>
+			<li>TELEFONO : {{ TELEFONO }}</li>
+			<li>LIMITE CREDITO : {{ LIMITE_CREDITO }}</li>
+			<li>REPR_COD : {{ REPR_COD }}</li>
+			<li>OBSERVACIONES : {{ OBSERVACIONES }}</li>
+			
+		</ul>
+	</nav>
+		
+	</div>
+	{% endblock %}

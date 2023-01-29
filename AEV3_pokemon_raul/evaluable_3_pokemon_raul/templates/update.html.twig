@@ -1,0 +1,77 @@
+{% extends "/layout/layout.html.twig" %}
+{% block update %}
+	<div id="content">
+		<div id="form_container">
+			<form method="post" action="">
+				<div>
+					<h2>New Client</h2>
+				</div>
+				<label for="clienteCod">Client Code</label>
+				<div>
+					<input name="clienteCod" type="number" name="CLIENTE_COD" size="5" value="{{clienteCod}}"/>
+				</div>
+
+				<label for="Nombre">Name</label>
+				<div>
+					<input name="nombre" type="text" maxlength="45" size="45" value="{{nombre}}"/>
+				</div>
+
+				<label for="direc">Address</label>
+				<div>
+					<input name="direc" type="text" maxlength="40" size="40" value="{{direc}}"/>
+				</div>
+
+				<label for="ciudad">City</label>
+				<div>
+					<input name="ciudad" type="text" maxlength="30" size="30" value="{{ciudad}}"/>
+				</div>
+
+				<label for="estado">State</label>
+				<div>
+					<input name="estado" type="text" maxlength="2" size="2" value="{{estado}}"/>
+				</div>
+
+				<label for="codPostal">ZIP Code</label>
+				<div>
+					<input name="codPostal" type="text" maxlength="9" size="9" value="{{codPostal}}"/>
+				</div>
+
+				<label for="area">Area</label>
+				<div>
+					<input name="area" type="number" maxlength="5" size="5" value="{{area}}"/>
+				</div>
+
+				<label for="telefono">Telephone</label>
+				<div>
+					<input name="telefono" type="text" maxlength="9" size="9" value="{{telefono}}"/>
+				</div>
+
+				<label for="reprCod">Contact
+				</label>
+				<div>
+					<select name="reprCod">
+						{% for empleado in data %}
+							{% if reprCod ==  empleado.empNo %}
+								<option value="{{empleado.empNo}}" selected>{{empleado.apellidos}}</option>
+							{% else %}
+								<option value="{{empleado.empNo}}">{{empleado.apellidos}}</option>
+							{% endif %}
+						{% endfor %}						
+					</select>
+				</div>
+
+				<label for="limiteCredito">Credit Limit</label>
+				<div>
+					<input name="limiteCredito" type="number" max="9999999.99" min="0" step=".01" value="{{limiteCredito}}"/>
+				</div>
+
+				<label for="observaciones">Comments</label>
+				<div>
+					<textarea name="observaciones" cols="50" rows="5" value="{{observaciones}}"></textarea>
+				</div>
+
+				<input type="submit" name="submit" value="Insert"/>
+		</form>
+	</div>
+</div>
+{% endblock %}

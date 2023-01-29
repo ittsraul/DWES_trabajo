@@ -1,0 +1,22 @@
+ {% extends "base/base.html.twig" %}
+ {% block index %}
+ <div class="navi">
+        <span><a href="#home">Home</a></span>
+        <span><a href="">Detail</a></span>
+        <span><a href="#contact">Contact</a></span>
+      </div>
+      <div class="page">
+      {% block menu %}
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+      {% block detail %}
+      {% endblock %}
+      {% block insert %}
+      {% endblock %}
+      {% block update %}
+      {% endblock %}
+      {% block delete %}
+      {% endblock %}
+      </div>
+{% endblock %}
