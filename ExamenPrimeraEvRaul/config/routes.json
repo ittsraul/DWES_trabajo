@@ -1,0 +1,19 @@
+{
+    "/":{
+        "controller": "MainController",
+        "method": "main"
+    },
+    "/ScoreList":{
+        "controller": "ScoreListController",
+        "method": "List"
+    },
+    "/PlayerSelect":{
+        "controller": "PlayerSelectController",
+        "method": "PlayerSelect"
+    },
+    "/Game":{
+        "controller": "GameController",
+        "method": "Game"
+    }
+
+}

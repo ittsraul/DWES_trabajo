@@ -1,0 +1,69 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+	<div id="content">
+		<div id="form_container">
+			<form method="post" action="">
+				<div>
+					<h2>Edit Client {{ data.getClienteCod() }}</h2>
+				</div>
+
+
+				<label for="Nombre">Name</label>
+				<div>
+					<input name="nombre" type="text" maxlength="45" size="45" value="{{ data.getNombre() }}"/>
+				</div>
+
+				<label for="direc">Address</label>
+				<div>
+					<input name="direc" type="text" maxlength="40" size="40" value="{{ data.getDirec() }}"/>
+				</div>
+
+				<label for="ciudad">City</label>
+				<div>
+					<input name="ciudad" type="text" maxlength="30" size="30" value="{{ data.getCiudad() }}"/>
+				</div>
+
+				<label for="estado">State</label>
+				<div>
+					<input name="estado" type="text" maxlength="2" size="2" value="{{ data.getEstado() }}"/>
+				</div>
+
+				<label for="codPostal">ZIP Code</label>
+				<div>
+					<input name="codPostal" type="text" maxlength="9" size="9" value="{{ data.getCodPostal() }}"/>
+				</div>
+
+				<label for="area">Area</label>
+				<div>
+					<input name="area" type="number" max="99999" size="5" value="{{ data.getArea() }}"/>
+				</div>
+
+				<label for="telefono">Telephone</label>
+				<div>
+					<input name="telefono" type="text" maxlength="9" size="9" value="{{ data.getTelefono() }}"/>
+				</div>
+
+				<label for="reprCod">Contact
+				</label>
+				<div>
+					<select name="reprCod">
+						{% for contact in contactList %}
+							<option value="{{ contact.getEmpNo() }}" {% if contact.getEmpNo() == data.getReprCod() %} selected="selected" {% endif %}>{{ contact.getApellidos() }}</option>
+						{% endfor %}
+					</select>
+				</div>
+
+				<label for="limiteCredito">Credit Limit</label>
+				<div>
+					<input name="limiteCredito" type="number" max="9999999.99" min="0" step=".01" value="{{ data.getLimiteCredito() }}"/>
+				</div>
+
+				<label for="observaciones">Comments</label>
+				<div>
+					<textarea name="observaciones" cols="50" rows="5">{{ data.getObservaciones() }}</textarea>
+				</div>
+
+				<input type="submit" name="submit" value="Update"/>
+		</form>
+	</div>
+</div>{% endblock %}

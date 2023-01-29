@@ -1,0 +1,11 @@
+{
+    "name": "daw2_raulsahe/ap2",
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "autoload" : {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    }
+}

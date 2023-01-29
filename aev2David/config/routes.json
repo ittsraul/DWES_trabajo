@@ -1,0 +1,26 @@
+{
+    "/":{
+        "controller": "MainController",
+        "method": "main"
+    },
+    "/clients": {
+        "controller": "ClientsController",
+        "method": "main"
+    },
+    "/detail": {
+        "controller": "DetailController",
+        "method": "main"
+    },
+    "/update": {
+        "controller": "CrudController",
+        "method": "update"
+    },
+    "/delete": {
+        "controller": "CrudController",
+        "method": "delete"
+    },
+    "/insert": {
+        "controller": "CrudController",
+        "method": "insert"
+    }
+}

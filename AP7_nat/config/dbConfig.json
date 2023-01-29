@@ -1,0 +1,6 @@
+{
+    "server": "mysql-server",
+    "user": "root",
+    "password": "root",
+    "dbname": "todolist"
+}

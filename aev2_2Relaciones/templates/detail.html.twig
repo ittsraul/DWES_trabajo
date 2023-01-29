@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+	{% block detail %}
+	<div id="content">
+	<h3>DETALLE DE CLIENTE SELECCIONADO:</h3>
+	<nav>
+		<ul>
+			<li>CLIENTE_COD : {{ data.getClienteCod() }}</li>
+			<li>NOMBRE : {{ data.getNombre() }}</li>
+			<li>DIREC : {{ data.getDirec() }}</li>
+			<li>CIUDAD : {{ data.getCiudad() }}</li>
+			<li>ESTADO : {{ data.getEstado() }}</li>
+			<li>COD_POSTAL : {{ data.getCodPostal() }}</li>
+			<li>AREA : {{ data.getArea() }}</li>
+			<li>TELEFONO : {{ data.getTelefono() }}</li>
+			<li>CONTACTO : {{ data.getReprCod().getApellidos }}</li>
+			<li>LIMITE CREDITO : {{ data.getLimiteCredito() }}</li>
+			<li>OBSERVACIONES : {{ data.Observaciones() }}</li>
+			
+		</ul>
+	</nav>
+		
+	</div>
+	{% endblock %}

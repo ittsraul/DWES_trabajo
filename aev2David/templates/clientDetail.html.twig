@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+	<div id="content">
+		<h1>{{data.getNombre()}} DETAILS</h1>
+		<ul>
+			<li>Client code: {{data.getClienteCod()}}</li>
+			<li>Address: {{data.getDirec()}}</li>
+			<li>City: {{data.getCiudad()}}</li>
+			<li>State: {{data.getEstado()}}</li>
+			<li>Zip Code: {{data.getCodPostal()}}</li>
+			<li>Area: {{data.getArea()}}</li>
+			<li>Telephone: {{data.getTelefono()}}</li>
+			<li>Contact: {{contact.getApellidos()}}</li>
+			<li>Credit Limit: {{data.getLimiteCredito()}}</li>
+			<li>Comments: {{data.getObservaciones()}}</li>
+		</ul>
+	</div>
+{% endblock %}

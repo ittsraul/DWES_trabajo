@@ -1,0 +1,10 @@
+{
+    "/list": {
+        "controller": "controllerList",
+        "method": "main"
+    },
+    "/detail": {
+        "controller": "controllerTotal",
+        "method": "main"
+    }
+}

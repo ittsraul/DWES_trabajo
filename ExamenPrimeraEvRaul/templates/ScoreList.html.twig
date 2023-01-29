@@ -1,0 +1,15 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+<div id="tooplate_main">
+        <div id="tooplate_content">
+        <h3>Score</h3>
+			<ul>
+            {# List de resultados paginado #}
+			{% for task in data|sort((a, b) => a.getScore() < b.getScore()) %}
+					<li href='//{{task.getIdPlayer()}}'> {{task.getNamePlayer()}} {{task.getScore() }} puntos</li>
+			{% endfor %}
+            </ul>
+            <div class="cleaner"></div>
+        </div> <!-- end of tooplate_content -->
+    </div> <!-- end of tooplate_main -->
+{% endblock %}

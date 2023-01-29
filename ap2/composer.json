@@ -1,0 +1,9 @@
+{
+    "name": "daw2_raulsahe/ap2",
+    "require": {},
+    "autoload" : {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    }
+}

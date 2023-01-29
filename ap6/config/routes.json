@@ -1,0 +1,14 @@
+{
+    "/":{
+        "controller": "MainController",
+        "method": "main"
+    },
+    "/list": {
+        "controller": "ListController",
+        "method": "main"
+    },
+    "/detail": {
+        "controller": "DetailController",
+        "method": "main"
+    }
+}

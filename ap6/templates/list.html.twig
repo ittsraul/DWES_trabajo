@@ -1,0 +1,41 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+	<div id="content">
+		<div class="cbox_fws">
+			<h3>Lista de tareas</h3>
+			<table border='1'>
+				{% for task in data|sort((a, b) => a.fecha_vencimiento <=> b.fecha_vencimiento) %}
+					<tr>
+						<td>
+							<a href='/detail/{{task.id}}'>{{task.titulo}}</a>
+						</td>
+						<td>{{task.fecha_vencimiento|date("d/m/Y")}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+
+		<div class="cbox_last">
+			<h3>Photo Gallery</h3>
+			<ul class="photo_gallery">
+				<li>
+					<a href="#"><img src="images/templatemo_image_01.jpg" alt="Image 1" class="image_frame"/></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/templatemo_image_02.jpg" alt="Image 2" class="image_frame"/></a>
+				</li>
+				<li class="rmp">
+					<a href="#"><img src="images/templatemo_image_03.jpg" alt="Image 3" class="image_frame"/></a>
+				</li>
+			</ul>
+			<div class="cleaner"></div>
+			<p>
+				<a href="#" class="more float_r">
+					<span>&gt;&gt;</span>
+					View All</a>
+			</p>
+
+		</div>
+
+	</div>
+{% endblock %}

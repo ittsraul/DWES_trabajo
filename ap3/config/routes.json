@@ -1,0 +1,10 @@
+{
+    "/list": {
+        "controller": "controllerList",
+        "method": "contentList"
+    },
+    "/detail": {
+        "controller": "controllerTotal",
+        "method": "contentDetail"
+    }
+}

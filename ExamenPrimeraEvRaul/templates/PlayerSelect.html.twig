@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+    <h3>Elige un jugador</h3>
+    <select name="IdPlayer">
+	{% for game in gameStart %}
+		<option value="{{ game.getIdplayer() }}" {% if game.getIdPlayer() == data.getIdRecordings() %} selected="selected" {% endif %}>{{ game.getNamePlayer() }}</option>
+        <br>
+	{% endfor %}
+    
+</select>
+<button type="submit">Submit</button>
+{% endblock %}

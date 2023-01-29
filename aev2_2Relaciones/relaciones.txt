@@ -1,0 +1,7 @@
+
+cliente lado muchos
+empleado lado uno 
+
+Constructor con new de arraycollection y su use
+
+getter y setter
