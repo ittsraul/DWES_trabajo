@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+	{% block content %}
+	<div id="content">
+	<h3>Cliente SELECCIONADO:</h3>
+	<nav>
+		<ul>
+			<li>CLIENTE_COD : {{detalleClient.getClienteCod()}}</li>
+			<li>NOMBRE : {{detalleClient.getNombre()}}</li>
+			<li>DIREC : {{detalleClient.getDirec()}}</li>
+			<li>CIUDAD : {{detalleClient.getCiudad()}}</li>
+			<li>ESTADO : {{detalleClient.getEstado()}}</li>
+			<li>COD_POSTAL : {{detalleClient.getCodPostal()}}</li>
+			<li>AREA : {{detalleClient.getArea()}}</li>
+			<li>TELEFONO : {{detalleClient.getTelefono()}}</li>
+			<li>REPR_COD : {{detalleClient.getReprCod().getApellidos()}}</li> 
+			<li>LIMITE CREDITO : {{detalleClient.getLimiteCredito()}}</li>
+			<li>OBSERVACIONES : {{detalleClient.getObservaciones()}}</li>
+			
+		</ul>
+	</nav>
+		
+	</div>
+	{% endblock %}
